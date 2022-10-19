@@ -36,9 +36,6 @@ function wordConceal(str) {
       // Compose final string
       return str.slice(vowelIndex) + str.slice(0, vowelIndex) + "ay";
     }
-  }
-  console.log(wordConceal("big")) // = "igbay"
-  console.log(wordConceal("glove")) // = "oveglay"
-  console.log(wordConceal("explain")) // = "explainway”
+}
 
 module.exports = wordConceal
