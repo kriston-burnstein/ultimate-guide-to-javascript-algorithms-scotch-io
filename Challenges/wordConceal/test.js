@@ -1,17 +1,21 @@
-const isAnagram = require('./index-START')
+const wordConceal = require('./index-START')
 
-test('isAnagram is a function', () => {
-  expect(typeof isAnagram).toEqual('function')
+test('wordConceal is a function', () => {
+  expect(typeof wordConceal).toEqual('function')
 })
 
-test('"dog" is an anagram of "god"', () => {
-  expect(isAnagram('dog', 'god')).toBeTruthy()
+test('when word starts with one consonant', () => {
+  expect(wordConceal('big') ).toEqual('igbay');
 })
 
-test('"Scotchy is Scotch!" is an anagram of "Scotch is Scotchy!"', () => {
-  expect(isAnagram('Scotchy is Scotch!', 'Scotch is Scotchy!')).toBeTruthy()
+test('when word starts with two consonants', () => {
+  expect(wordConceal('glove') ).toEqual('oveglay');
 })
 
-test('"I do not work weekends." is not an anagram of "I do not work weekdays!"', () => {
-  expect(isAnagram('I do not work weekends.', 'I do not work weekdays!')).toBeFalsy()
+test('when word starts with vowel', () => {
+  expect(wordConceal('explain') ).toEqual('explainway');
 })
+
+console.log(wordConceal("big")) // = "igbay"
+console.log(wordConceal("glove")) // = "oveglay"
+console.log(wordConceal("explain")) // = "explainway”
