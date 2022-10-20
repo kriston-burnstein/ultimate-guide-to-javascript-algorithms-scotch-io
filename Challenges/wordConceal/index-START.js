@@ -38,4 +38,8 @@ function wordConceal(str) {
     }
 }
 
+//Practicial applications
+
+//This algorithm could be used as an obfuscation technique in games. This means that it is used to pass messages across in a coded form, thus reducing the readability and preventing it from being easily interpreted.
+
 module.exports = wordConceal
