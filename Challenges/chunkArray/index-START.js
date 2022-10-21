@@ -65,3 +65,11 @@ console.log(chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], 5))
 // [[1, 2, 3, 4, 5], [6, 7, 8, 9, 10], [11, 12, 13]]
 
 module.exports = chunkArray
+
+//Speed Test Results
+//according to scotch.io the for loop with .slice() was the fastest of all the implementations
+
+//Practical Applications
+//Applicable to batch data processing in real world applications. When processing a very large data-set listed as one large array, we could use this technique for breaking the data into smaller groups to be processed or presented in batches. This may bring the idea of pagination of lazy-loading to mind although there are usually more sophisticated ways to implement these.
+
+//One practical use case may be in developing a quiz app where questions are to be presented in groups of a specified number or size. We could retrieve all questions at once but chunk them into the desired size for each group for presentation of perhaps only five at a time.
