@@ -68,5 +68,22 @@ function mergeArrays(...arrays) {  //rest
     return Array.from(new Set([...jointArray]))
 }
 
+//Full solution with .filter() method
+//Used to create a new array from another array. 
+//The new array contains only elements that satisfy the specified condition. It accepts one main parameter i.e the function specifying the testing condition
+
+//We use the .filter() method to loop through the jointArray while testing to see if the index of the current item matches the index of the current iteration.
+
+//indexOf() method is used to get the FIRST index at which a given element can be found in an array. It returns -1 if the element isn't present.
+
+function mergeArrays(...arrays) {
+    let jointArray = []
+
+    arrays.forEach(array => {
+        jointArray = [...jointArray, ...array]
+    })
+    const uniqueArray = jointArray.filter((item,index) => jointArray.indexOf(item) === index)
+    return uniqueArray
+}
 
 module.exports = mergeArrays
