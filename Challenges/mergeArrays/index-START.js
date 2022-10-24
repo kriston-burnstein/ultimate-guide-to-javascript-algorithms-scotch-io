@@ -86,4 +86,28 @@ function mergeArrays(...arrays) {
     return uniqueArray
 }
 
+//Full solution with .reduce(), which accepts two parameters, the function to be executed and the initial value of the accumulator.
+
+//Using .reduce() to continuously execute a function that checks if the current item is already in the accumulator array (newArray), which we initialized to an empty array at the beginning of the iteration, using an empty array [] as the second parameter.
+
+//If the element is within the array already, we return the array as it is, to be used in the next iteration. If it isn’t, we return a new array which we create from the elements in the accumulator(newArray) and the current item. This new array is used as the accumulator in the next iteration.
+
+//At the end of the reduction process we are left with an array that contains all elements of the merged arrays without duplicates. We store this in uniqueArray which we return at the end.
+
+function mergeArrays(...arrays) {  //rest, of all the arrays
+    let jointArray = []
+
+    arrays.forEach(array => {
+        jointArray = [...jointArray, ...array]  //spread all the arrays into new jointArray
+    })
+    const uniqueArray = jointArray.reduce((newArray, item) =>{
+        if (newArray.includes(item)){
+            return newArray
+        } else {
+            return [...newArray, item]
+        }
+    }, [])
+    return uniqueArray
+}
+
 module.exports = mergeArrays
