@@ -58,4 +58,15 @@ function mergeArrays(...arrays) {  //rest of all the arrays
     return [...new Set([...jointArray])]
 }
 
+//Full solution with Array.from() method to convert the set, which is an iterable object, to an array as shown below:
+function mergeArrays(...arrays) {  //rest
+    let jointArray = []
+
+    arrays.forEach(array => {
+        jointArray = [...jointArray, ...array]  //spread
+    });
+    return Array.from(new Set([...jointArray]))
+}
+
+
 module.exports = mergeArrays
