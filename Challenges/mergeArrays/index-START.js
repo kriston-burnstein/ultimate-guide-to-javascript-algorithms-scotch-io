@@ -43,4 +43,19 @@ function mergeArrays(...arrays) {  //rest of all the arrays
 
 // Above, for each array, we use the spread operator to spread its elements as well as the elements in the jointArray, which is initially empty, into a new array. We then reassign this array to jointArray. On complete execution of this statement, jointArray now contains all the elements from all the arrays received(still with duplicates).
 
+//Full solution with set()
+// We use the spread operator to spread out all the elements of the jointArray into a new set. This eliminates all duplicates as sets are designed to only hold unique values.
+// We then spread the unique elements of the set back into an array which we return as the final result. 
+
+function mergeArrays(...arrays) {  //rest of all the arrays
+
+    let jointArray = []
+    
+    arrays.forEach(array => {
+        jointArray = [...jointArray, ...array] //spread all into jointArray
+    });
+
+    return [...new Set([...jointArray])]
+}
+
 module.exports = mergeArrays
