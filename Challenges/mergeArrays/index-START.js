@@ -114,3 +114,6 @@ module.exports = mergeArrays
 
 //Speed Test Results
 //According to scotch.io, tests reveal that .filter() method is the fastest approach of all three. Next is using a set.
+
+//Practical Applications
+//Solid understanding of these concepts and techniques will improve how we handle duplicate data in real world applications. We can use these techniques in cleaning up large data-set for statistical computations and visual representation.
