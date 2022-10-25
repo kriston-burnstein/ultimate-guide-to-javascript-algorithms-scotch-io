@@ -111,3 +111,6 @@ function mergeArrays(...arrays) {  //rest, of all the arrays
 }
 
 module.exports = mergeArrays
+
+//Speed Test Results
+//According to scotch.io, tests reveal that .filter() method is the fastest approach of all three. Next is using a set.
