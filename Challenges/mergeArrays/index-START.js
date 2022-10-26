@@ -22,7 +22,7 @@ function mergeArrays() {
 
 // OF NOTE: The main difference between REST and SPREAD is that the rest operator puts the rest of some specific user-supplied values into a JavaScript array. But the spread syntax expands iterables into individual elements.
 
-function mergeArrays(...arrays) {
+function mergeArrays(...arrays) { //rest
     console.log(arrays)
    // some more code here
 }
