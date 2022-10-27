@@ -26,3 +26,9 @@ function falsyBouncer(array) {
 console.log(falsyBouncer([1, 0, null, '', 5])) // should return [1,5]
 
 module.exports = falsyBouncer
+
+// Performance Test Results
+// According to scotch.io fo of loop is the faster approach to solving this problem. However, filter() method is only slightly slower.
+
+// Practical Applications
+// These solutions may enable us clean up our data-set for computation and visual representation in real world applications.
