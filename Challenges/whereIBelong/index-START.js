@@ -7,13 +7,13 @@ whereIBelong([1,2,3,4], 1.5) // should return 1 because it is greater
 than 1(index 0), but less than 2(index 1).
 */
 
-
+//Using sort() and indexOf()
 
 function whereIBelong(arr, num) {
-   // Code goes here
-
+   arr.push(num)
+   return arr.sort((a, b) => a - b).indexOf(num)
 }
 
-
+console.log(whereIBelong([1,2,3,4], 1.5)) // should return 1 (index)
 
 module.exports = whereIBelong
