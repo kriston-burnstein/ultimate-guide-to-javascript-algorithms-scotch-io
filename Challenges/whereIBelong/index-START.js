@@ -31,6 +31,20 @@ function whereIBelong(arr, num) {
    return arr.length
 }
 
+//While loop
+//Sort and use a while loop to iterate through the array while incrementing the counter each time the specified number num is greater than the current value arr[counter].
+//At the end, we return counter which holds the number of smaller values i.e the position at which the number is to be inserted.
+function whereIBelong(arr, num) {
+   arr.sort((a, b) => {
+       return a - b
+   })
+   let counter = 0;
+   while (num > arr[counter]) {
+       counter++
+   }
+   return counter
+}
+
 console.log(whereIBelong([1,2,3,4], 1.5)) // should return 1 (index)
 
 module.exports = whereIBelong
